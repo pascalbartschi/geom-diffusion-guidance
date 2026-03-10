@@ -50,6 +50,7 @@ distribution_comparison.py
 enhanced_likelihood.py
 
 # exceptions
+!environment.yml
 # !datasets/datasetmd_pdbbind_train.pt
 # !datasets/datasetmd_pdbbind_validation.pt
 # !datasets/training_validation_ids.json
