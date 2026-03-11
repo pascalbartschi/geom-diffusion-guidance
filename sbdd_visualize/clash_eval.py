@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import argparse
 import subprocess
 import re
 import os
@@ -11,7 +12,6 @@ import traceback
 from typing import List, Dict
 from itertools import combinations
 
-from pathlib import Path
 from string import ascii_uppercase
 
 import pandas as pd
@@ -1347,9 +1347,19 @@ if __name__ == "__main__":
     # final_df = full_pipeline(input_folder, dpocket_detection_radius = 10, pykv_args = kv_args, overwrite_existing=True, requested_workers=None)
     
     # run analysis
-    save_path = Path("../benchmarks/ours_guidanceBL/ours_guidanceBL_metrics/")
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--save_path",
+        type=Path,
+        default=Path("../benchmarks/ours_guidanceBL/ours_guidanceBL_metrics/"),
+        help="Path to metrics folder"
+    )
+
+    args = parser.parse_args()
+
+    save_path = args.save_path
     final_df = pd.read_csv(save_path / "detailed_clash_evaluation.csv")
-    
     # # sanity checks
     # print("Shape:", final_df.shape)
     # print("Index unique:", final_df.index.is_unique)

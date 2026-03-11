@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 
 from moldiff.constants import bond_decoder, atom_decoder
+from moldiff.atom_bond_ring_distr_barplots import atom_bond_ring_distributions_from_smiles
 
 _MEAN_STD_RE = re.compile(
     r"""^\s*
