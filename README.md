@@ -3,7 +3,11 @@
 ## Limits in Preventing Steric Clashes
 
 <p align="center">
-  <video src="diffusion-animation/diffusion-animation.mp4" controls width="700"></video>
+<a href="diffusion-animation/diffusion-animation.mp4">
+<img src="diffusion-animation/diffusion-animation.gif"
+     alt="Diffusion Animation"
+     width="700">
+</a>
 </p>
 Animation: Visualization of reverse-time variance exploding diffusion of a ligand conditioned on Glutathione S-Transferase P1-1 Apo Form 1 pocket (CrossDocked2020 cut). Reproduction guide in [diffusion-animation](diffusion-animation).
 
