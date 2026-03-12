@@ -6,6 +6,7 @@
   <video src="diffusion-animation/diffusion-animation.mp4" controls width="700"></video>
 </p>
 Animation: Visualization of reverse-time variance exploding diffusion of a ligand conditioned on Glutathione S-Transferase P1-1 Apo Form 1 pocket (CrossDocked2020 cut). Reproduction guide in [diffusion-animation](diffusion-animation).
+
 ---
 
 ## Description
@@ -41,9 +42,7 @@ All experiments in the thesis were executed within this environment.
 
 # Data Availability
 
-A preprocessed dataset used in the thesis experiments can be downloaded here:
-
-https://drive.google.com/drive/folders/1OQCFzLhhrYmos3PmDKR5BXYZeDUDLbHN
+A preprocessed dataset used in the thesis experiments can be downloaded [here](https://drive.google.com/drive/folders/1OQCFzLhhrYmos3PmDKR5BXYZeDUDLbHN).
 
 Alternatively, datasets can be generated from protein–ligand pocket pairs using the following naming scheme:
 
