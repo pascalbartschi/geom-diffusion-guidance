@@ -2,10 +2,7 @@
 # Master Thesis: Inference-Time Guidance in Pocket-Conditioned Molecular Diffusion Models
 ## Limits in Preventing Steric Clashes
 
-
-
-https://github.com/user-attachments/assets/99ddde33-b378-4565-b9a0-da8cd7001b36
-
+https://github.com/user-attachments/assets/9d69aac3-3ae4-456d-8025-c92e15a6b831
 
 Animation: Visualization of reverse-time variance exploding diffusion of a ligand conditioned on Glutathione S-Transferase P1-1 Apo Form 1 pocket (CrossDocked2020 cut). Reproduction guide in [diffusion-animation](diffusion-animation).
 
