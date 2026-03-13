@@ -4,7 +4,7 @@
 
 https://github.com/user-attachments/assets/9d69aac3-3ae4-456d-8025-c92e15a6b831
 
-Animation: Visualization of reverse-time variance exploding diffusion of a ligand conditioned on Glutathione S-Transferase P1-1 Apo Form 1 pocket (CrossDocked2020 cut). Reproduction guide in [diffusion-animation](diffusion-animation).
+**Figure 1:** Visualization of reverse-time variance exploding diffusion of a ligand conditioned on a Glutathione S-Transferase P1-1 Apo Form 1 pocket. Reproduction guide in [diffusion-animation](diffusion-animation).
 
 ---
 
@@ -12,17 +12,15 @@ Animation: Visualization of reverse-time variance exploding diffusion of a ligan
 
 This repository contains the code accompanying the master's thesis **“Inference-Time Guidance in Pocket-Conditioned Molecular Diffusion Models: Limits in Preventing Steric Clashes.”**
 
-The project builds on pocket‑conditioned **SE(3)-equivariant diffusion models** for 3D molecular generation and studies the structural failure mode of **steric clashes between generated ligands and protein pockets**. The implementation uses **MISATO-derived protein–ligand complexes** as training data and integrates **Continuous Diffusion for Categorical Data (CDCD)** for modeling atom types jointly with atomic coordinates.
+The project builds on pocket‑conditioned **SE(3)-equivariant diffusion models** [1,2] for 3D molecular generation and studies the structural failure mode of **steric clashes between generated ligands and protein pockets**. The implementation uses **MISATO-derived protein–ligand complexes** [3] as training data and integrates **Continuous Diffusion for Categorical Data (CDCD)** [4] for modeling atom types jointly with atomic coordinates.
+
+<p align="center">
+  <img width="772" height="357" alt="graphical_abstract" src="https://github.com/user-attachments/assets/3059d9a9-ec68-4a96-aeeb-a6c66641d2cf" />
+</p>
+
+**Figure 2:** Solving a reverse-time SDE yields a score-based generative model that captures a data distribution in molecular space. Inspired by [1].
 
 Additionally, the repository implements **side‑chain repulsive guidance at inference time**, which introduces a geometric repulsive potential between ligand atoms and protein side chains during the reverse diffusion process. While CDCD stabilizes categorical sampling, experiments show that **repulsive geometric guidance does not significantly reduce steric clash frequency**, indicating that preventing such structural violations likely requires stronger inductive biases incorporated during model training rather than only during sampling.
-
-The repository therefore provides:
-
-- A full training pipeline for **pocket‑conditioned equivariant molecular diffusion**
-- Tools for **dataset generation from protein–ligand complexes**
-- Scripts for **parallel ligand generation**
-- A reproducible **evaluation and benchmarking framework**
-- Visualization tools for **clash analysis and PoseBusters survival plots**
 
 ---
 
@@ -192,3 +190,13 @@ If you use this repository, please cite it as software:
   url = {https://github.com/pascalbartschi/geom-diffusion-guidance}
 }
 ```
+
+# README references
+
+[1] Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2021). Score-based generative modeling through stochastic differential equations. https://doi.org/10.48550/arXiv. 2011.13456
+    
+[2] Schneuing, A., Harris, C., Du, Y., Didi, K., Jamasb, A., Igashov, I., Du, W., Gomes, C., Blundell, T. L., Lio, P., Welling, M., Bronstein, M., & Correia, B. (2024). Structure-based drug design with equivariant diffusion models. Nature Computational Science, 4 (12), 899–909. https://doi.org/10.1038/s43588-024-00737-x
+    
+[3] Siebenmorgen, T., Menezes, F., Benassou, S., Merdivan, E., Didi, K., Mourão, A. S. D., Kitel, R., Liò, P., Kesselheim, S., Piraud, M., Theis, F. J., Sattler, M., & Popowicz, G. M. (2024). MISATO: Machine learning dataset of protein–ligand complexes for structure-based drug discovery. Nature Computational Science, 4 (5), 367–378. https://doi.org/10.1038/s43588-024-00627-2
+    
+[4] Dieleman, S., Sartran, L., Roshannai, A., Savinov, N., Ganin, Y., Richemond, P. H., Doucet, A., Strudel, R., Dyer, C., Durkan, C., Hawthorne, C., Leblond, R., Grathwohl, W., & Adler, J. (2022). Continuous diffusion for categorical data. https://doi.org/10.48550/arXiv.2211.15089
