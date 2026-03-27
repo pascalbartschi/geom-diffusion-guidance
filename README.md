@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/9d69aac3-3ae4-456d-8025-c92e15a6b831
 
 ## Description
 
-This repository contains the code accompanying the master's thesis **“Inference-Time Guidance in Pocket-Conditioned Molecular Diffusion Models: Limits in Preventing Steric Clashes.”**
+This repository contains the code accompanying the master's thesis **“Inference-Time Guidance in Pocket-Conditioned Molecular Diffusion Models: Limits in Preventing Steric Clashes.”** For further details, please refer to the full open-access [master’s thesis report](https://doi.org/10.3929/ethz-c-000797939).
 
 The project builds on pocket‑conditioned **SE(3)-equivariant diffusion models** [1,2] for 3D molecular generation and studies the structural failure mode of **steric clashes between generated ligands and protein pockets**. The implementation uses **MISATO-derived protein–ligand complexes** [3] as training data and integrates **Continuous Diffusion for Categorical Data (CDCD)** [4] for modeling atom types jointly with atomic coordinates.
 
